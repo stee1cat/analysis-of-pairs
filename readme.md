@@ -1,0 +1,1 @@
+# Simple analysis of currency pairs
