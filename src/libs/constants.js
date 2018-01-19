@@ -14,3 +14,90 @@ export const Action = {
     Buy: false,
     Sell: true
 };
+
+export const Routes = [
+    [
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Sell
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Sell
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Buy
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Sell
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Buy
+        },
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Buy
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.ETH_USD,
+            action: Action.Buy
+        },
+    ]
+];

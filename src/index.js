@@ -1,98 +1,10 @@
-import { Action, Currency, Pair } from './libs/constants';
+import { Action, Currency, Pair, Routes } from './libs/constants';
 import { Order } from './libs/Order';
 import { OrderBook } from './libs/OrderBook';
 
-const routes = [
-    [
-        {
-            pair: Pair.BTC_USD,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Sell
-        }
-    ],
-    [
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.BTC_USD,
-            action: Action.Sell
-        }
-    ],
-    [
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.BTC_USD,
-            action: Action.Buy
-        }
-    ],
-    [
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Sell
-        }
-    ],
-    [
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.BTC_USD,
-            action: Action.Buy
-        },
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Buy
-        }
-    ],
-    [
-        {
-            pair: Pair.ETH_BTC,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.BTC_USD,
-            action: Action.Sell
-        },
-        {
-            pair: Pair.ETH_USD,
-            action: Action.Buy
-        },
-    ]
-];
-
 const INITIAL_BALANCE = 100;
-const totalResult = [];
 
-routes.map(function (path) {
+Routes.map(function (path) {
     let volume = INITIAL_BALANCE;
 
     console.log('initial balance:', volume);
@@ -112,7 +24,7 @@ routes.map(function (path) {
 
         volume = order.volume;
 
-        console.log(deal.action ? 'sell:' : 'buy:', order.volume, order.deal.pair);
+        console.log(deal.action === Action.Sell ? 'sell:' : 'buy:', order.volume, order.deal.pair);
     });
 
     console.log('-'.repeat(80));
