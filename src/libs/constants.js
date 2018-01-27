@@ -47,7 +47,7 @@ export const Routes = [
     [
         {
             pair: Pair.ETH_BTC,
-            action: Action.Sell
+            action: Action.Buy
         },
         {
             pair: Pair.ETH_USD,
@@ -60,8 +60,8 @@ export const Routes = [
     ],
     [
         {
-            pair: Pair.ETH_BTC,
-            action: Action.Buy
+            pair: Pair.BTC_USD,
+            action: Action.Sell
         },
         {
             pair: Pair.ETH_USD,
@@ -69,6 +69,20 @@ export const Routes = [
         },
         {
             pair: Pair.ETH_BTC,
+            action: Action.Sell
+        }
+    ],
+    [
+        {
+            pair: Pair.ETH_BTC,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.BTC_USD,
+            action: Action.Sell
+        },
+        {
+            pair: Pair.ETH_USD,
             action: Action.Sell
         }
     ],
